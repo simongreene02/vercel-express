@@ -1,8 +1,6 @@
 import express from "express";
 import { renderPage } from 'vike/server';
 
-import '../dist/server/entry.mjs'
-
 const app = express();
 
 app.get("/", async (req, res) => {
