@@ -1,10 +1,13 @@
 <script setup>
-import { ref } from 'vue'
-const count = ref(0)
+import { useCounterStore } from '../counterStore.js'
+import { storeToRefs } from 'pinia'
+
+const store = useCounterStore();
+const { count } = storeToRefs(store);
 </script>
 
 <template>
-  <button @click="count++">Count is: {{ count }}</button>
+  <button @click="store.increment">Count is: {{ count }}</button>
 </template>
 
 <style scoped>

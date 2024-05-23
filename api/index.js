@@ -3,6 +3,8 @@ import { renderPage } from 'vike/server';
 
 const app = express();
 
+app.use(express.static('./dist/client'));
+    
 app.get("/", async (req, res) => {
   const { url } = req
   console.log('Request to url:', url)
