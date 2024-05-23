@@ -7,7 +7,13 @@ const { count } = storeToRefs(store);
 </script>
 
 <template>
-  <button @click="store.increment">Count is: {{ count }}</button>
+  <v-app>
+    <v-main>
+      <v-container>
+        <v-btn @click="store.increment">Count is: {{ count }}</v-btn>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <style scoped>
