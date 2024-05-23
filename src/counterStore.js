@@ -1,12 +1,16 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  function increment() {
-    count.value++
-    console.log(value)
-  }
+export const makeCounter = defineStore("counter", () => {
+    const counterNum = ref(0);
+    // eslint-disable-next-line no-unused-vars
+    function increment() {
+        counterNum.value++;
+    }
+    // eslint-disable-next-line no-unused-vars
+    function decrement() {
+        counterNum.value--;
+    }
 
-  return { count, increment }
-})
+    return { counterNum, increment, decrement };
+});
